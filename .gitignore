@@ -1,5 +1,7 @@
 # Post Compile csv folders
 
+data/
+
 *.csv
 *.json
 *.zip
