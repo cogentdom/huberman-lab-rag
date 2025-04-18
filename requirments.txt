@@ -5,3 +5,4 @@ pymongo
 openai
 langchain
 semantic-text-splitter
+tokenizers
