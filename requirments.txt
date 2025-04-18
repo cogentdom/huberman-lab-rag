@@ -2,3 +2,6 @@ numpy
 pandas
 youtube-transcript-api
 pymongo
+openai
+langchain
+semantic-text-splitter
