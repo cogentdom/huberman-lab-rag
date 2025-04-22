@@ -6,3 +6,4 @@ openai
 langchain
 semantic-text-splitter
 tokenizers
+python-dotenv
