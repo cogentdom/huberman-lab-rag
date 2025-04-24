@@ -3,7 +3,7 @@ pandas
 youtube-transcript-api
 pymongo
 redis
-openai
+openai==1.75.0
 langchain
 semantic-text-splitter
 tokenizers
