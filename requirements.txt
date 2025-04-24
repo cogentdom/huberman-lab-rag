@@ -2,6 +2,7 @@ numpy
 pandas
 youtube-transcript-api
 pymongo
+redis
 openai
 langchain
 semantic-text-splitter
