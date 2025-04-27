@@ -1,10 +1,12 @@
-numpy
-pandas
-youtube-transcript-api
-pymongo
-redis
+# python>=3.12.7
+numpy==2.2.4
+pandas==2.2.3
+youtube-transcript-api==1.0.3
+pymongo==4.12.0
+redis==5.2.1
 openai==1.75.0
-langchain
-semantic-text-splitter
-tokenizers
-python-dotenv
+langchain==0.3.23
+semantic-text-splitter==0.25.1
+tokenizers==0.21.1
+python-dotenv==1.1.0
+selenium==4.31.0
