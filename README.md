@@ -1,5 +1,6 @@
 # huberman-lab-rag
 
+---
 ### Setup
 
 > environment   
@@ -18,21 +19,26 @@
 > **ToDo:** permissions  
 > &emsp; `iam`: &ensp; Cloud stuff `S3`, `DB keys`, `Docker deployment`
 
-
+---
 ### Workflow  
 
 > Scrape the URL for each podcast with `youtube_get_data.ipynb`  
 &emsp; **- Note:** This script saves the scraped data to `huberman_videos.csv`  
+> 
+> Generate transcripts by running `youtube_transcript_gen.ipynb`  
+&emsp; **- Note:** Saves scripts to the `data/documents` dicretory as `.txt`
 
 <br>
 
-> Generate transcripts by running `youtube_transcript_gen.ipynb`
+> Chunk and Embed documents by running `document_embedding.ipynb`  
+&emsp; **- Note:** Creates `embedding.csv`  
 
 <br>
 
-> Chunk and Embed documents by running `document_embedding.ipynb`
+> Redis `redis_index_embeddings.ipynb`
 
 <br>
 
 > Create Mongo database by running `pymongo_get_database.py`  
 > Add documnets to Mong by running `pymongo_test_insert_file.py`
+
