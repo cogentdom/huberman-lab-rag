@@ -2,7 +2,8 @@ numpy
 pandas
 youtube-transcript-api
 pymongo
-openai
+redis
+openai==1.75.0
 langchain
 semantic-text-splitter
 tokenizers
