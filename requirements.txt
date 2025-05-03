@@ -10,3 +10,4 @@ semantic-text-splitter==0.25.1
 tokenizers==0.21.1
 python-dotenv==1.1.0
 selenium==4.31.0
+wget==3.2
