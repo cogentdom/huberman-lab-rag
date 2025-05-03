@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huberman Lab Chat</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .chat-container {
+            height: calc(100vh - 200px);
+        }
+        .message {
+            max-width: 80%;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-radius: 1rem;
+        }
+        .user-message {
+            background-color: #e2e8f0;
+            margin-left: auto;
+        }
+        .bot-message {
+            background-color: #f0f9ff;
+            margin-right: auto;
+        }
+        .loading {
+            display: none;
+        }
+        .loading.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold text-center mb-8">Huberman Lab Chat</h1>
+        
+        <div class="bg-white rounded-lg shadow-lg p-4 chat-container overflow-y-auto" id="chat-container">
+            <div class="message bot-message">
+                Hello! I'm your Huberman Lab assistant. Ask me anything about neuroscience, health, and productivity based on Dr. Huberman's content.
+            </div>
+        </div>
+
+        <div class="mt-4 flex gap-2">
+            <input type="text" 
+                   id="user-input" 
+                   class="flex-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                   placeholder="Type your question here..."
+                   onkeypress="handleKeyPress(event)">
+            <button onclick="sendMessage()" 
+                    class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                Send
+            </button>
+        </div>
+
+        <div class="loading mt-4 text-center" id="loading">
+            <div class="inline-block animate-spin rounded-full h-8 w-8 border-4 border-blue-500"></div>
+            <p class="mt-2 text-gray-600">Thinking...</p>
+        </div>
+    </div>
+
+    <script>
+        const chatContainer = document.getElementById('chat-container');
+        const userInput = document.getElementById('user-input');
+        const loading = document.getElementById('loading');
+
+        function addMessage(message, isUser = false) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${isUser ? 'user-message' : 'bot-message'}`;
+            messageDiv.textContent = message;
+            chatContainer.appendChild(messageDiv);
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        }
+
+        async function sendMessage() {
+            const message = userInput.value.trim();
+            if (!message) return;
+
+            // Add user message to chat
+            addMessage(message, true);
+            userInput.value = '';
+            loading.classList.add('active');
+
+            try {
+                const response = await fetch('/query', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ query: message }),
+                });
+
+                const data = await response.json();
+                
+                if (response.ok) {
+                    addMessage(data.response);
+                } else {
+                    addMessage('Sorry, there was an error processing your request.');
+                }
+            } catch (error) {
+                addMessage('Sorry, there was an error connecting to the server.');
+            } finally {
+                loading.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+</html> 

@@ -11,3 +11,4 @@ tokenizers==0.21.1
 python-dotenv==1.1.0
 selenium==4.31.0
 wget==3.2
+flask==3.0.2
