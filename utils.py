@@ -2,12 +2,37 @@ import numpy as np
 import os
 import pickle
 import openai
+from dotenv import load_dotenv
 import redis
+from redis.commands.search.indexDefinition import (
+    IndexDefinition,
+    IndexType
+)
+from redis.commands.search.query import Query
+from redis.commands.search.field import (
+    TextField,
+    VectorField
+)
 from typing import List
 from collections import defaultdict
-from redis.commands.search.query import Query
 
 EMBEDDING_MODEL = "text-embedding-3-small"
+
+load_dotenv()
+open_api_key = os.getenv("OPENAI_API_KEY")
+openai_client = openai.OpenAI(api_key=open_api_key)
+
+REDIS_HOST =  "localhost"
+REDIS_PORT = 6379
+REDIS_PASSWORD = "" # default for passwordless Redis
+
+# Connect to Redis
+redis_client = redis.Redis(
+    host=REDIS_HOST,
+    port=REDIS_PORT,
+    password=REDIS_PASSWORD
+)
+redis_client.ping()
 
 # Save the defaultdict to a file
 def save_defaultdict(data, filename):
@@ -76,13 +101,7 @@ def add_context(
     with open(f"chat_history/prompts/{file_name}.txt", "w") as f:
         f.write(prompt)
 
-def ingest_query(
-    openai_client: openai.OpenAI,
-    redis_client: redis.Redis,
-    user_query: str,
-    k: int = 5,
-    vector_field: str = "content_vector",
-):
+def process_query(user_query: str) -> str:
     results = search_redis(
         openai_client, 
         redis_client, 
@@ -100,8 +119,23 @@ def ingest_query(
 
     add_context(
         chunk_ids,
-        'prompt_1',
+        'prompt_4',
         title_dict,
         chunk_dict
     )
+
+    with open("chat_history/prompts/prompt_4.txt", "r", encoding="utf-8") as f:
+        instructions = f.read()
+
+    response = openai_client.responses.create(
+        model="o4-mini",
+        instructions=instructions,
+        input=user_query,
+    )
+
+    os.makedirs('chat_history', exist_ok=True)
+    with open(f"chat_history/response_4.txt", "w") as f:
+        f.write(response.output_text)
+
+    return response.output_text
 
