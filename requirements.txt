@@ -12,3 +12,9 @@ python-dotenv==1.1.0
 selenium==4.31.0
 wget==3.2
 flask==3.0.2
+jupyter_server==2.15.0
+jupyter_mcp_server==0.3.4
+jupyterlab==4.4.1
+jupyter-collaboration==4.0.2
+ipykernel
+# datalayer_pycrdt==0.12.15

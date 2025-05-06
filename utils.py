@@ -46,6 +46,14 @@ def load_defaultdict(filename):
         restored_dict = defaultdict(lambda: defaultdict(list), loaded_dict)
     return restored_dict
 
+# Helper function to get the video key from the chunk key
+def get_video_key(chunk_key: str) -> str:
+    return chunk_key.split('_video_key:')[1].split('_chunk_id:')[0]
+
+# Helper function to get the chunk index from the chunk key
+def get_chunk_index(chunk_key: str) -> int:
+    return int(chunk_key.split('_chunk_id:')[1])
+
 # --- Query Tools ---
 # Helper function to search on multiple fields
 def create_hybrid_field(field_name: str, value: str) -> str:
@@ -58,7 +66,7 @@ def search_redis(
     user_query: str,
     index_name: str = "embeddings-index",
     vector_field: str = "content_vector",
-    return_fields: list = ["title", "text", "chunk_id", "vector_score"],
+    return_fields: list = ["title", "text", "chunk_key", "vector_score"],
     hybrid_fields = "*",
     k: int = 5,
 ) -> List[dict]:
@@ -85,7 +93,7 @@ def search_redis(
     return results.docs
 
 def add_context(
-    chunk_ids: list,
+    chunk_keys: list,
     file_name: str,
     title_dict: dict,
     chunk_dict: dict,
@@ -93,9 +101,9 @@ def add_context(
     with open(f'data/prompt.txt', 'r', encoding='utf-8') as f:
         prompt = f.read()
 
-    for i, chunk_id in enumerate(chunk_ids):
-        video_id = chunk_id.split('_videoid:')[1].split('_chunk:')[0]
-        prompt = f"{prompt}### Context Document {i}\nTitle: \t{title_dict[video_id]}\nContext: \t{chunk_dict[chunk_id]}\n\n\n"
+    for i, chunk_key in enumerate(chunk_keys):
+        video_key = get_video_key(chunk_key)
+        prompt = f"{prompt}### Context Document {i}\nTitle: \t{title_dict[video_key]}\nContent: \t{chunk_dict[chunk_key]}\n\n\n"
 
     os.makedirs('chat_history/prompts', exist_ok=True)
     with open(f"chat_history/prompts/{file_name}.txt", "w") as f:
@@ -110,7 +118,7 @@ def process_query(user_query: str) -> str:
         k=10
     )
 
-    chunk_ids = [x.chunk_id for x in results]
+    chunk_keys = [x.chunk_key for x in results]
 
     with open('data/title_dict.pkl', 'rb') as f:
         title_dict = pickle.load(f)
@@ -118,7 +126,7 @@ def process_query(user_query: str) -> str:
         chunk_dict = pickle.load(f)
 
     add_context(
-        chunk_ids,
+        chunk_keys,
         'prompt_4',
         title_dict,
         chunk_dict
