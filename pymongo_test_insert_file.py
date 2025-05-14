@@ -1,13 +1,13 @@
 import pandas as pd
+from utils import load_dict
 # Get the database using the method we defined in pymongo_test_insert file
 from pymongo_get_database import get_database
 
 dbname = get_database()
 collection_name = dbname["scripts"]
 
-data = pd.read_csv('data/huberman-videos.csv', encoding='latin1', index_col=False)
+data = pd.read_csv('data/huberman_videos.csv', encoding='latin1', index_col=False)
 
-n = 1
 items = []
 for video_key in data.iloc[1:3]["video_key"]:
 
@@ -23,7 +23,6 @@ for video_key in data.iloc[1:3]["video_key"]:
     "transcript" : lines
     }
     items.append(item_1)
-    n+=1
 
 collection_name.insert_many(items)
 

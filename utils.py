@@ -46,6 +46,14 @@ def load_defaultdict(filename):
         restored_dict = defaultdict(lambda: defaultdict(list), loaded_dict)
     return restored_dict
 
+def load_dict(filename: str) -> dict:
+    with open(filename, 'rb') as f:
+        return pickle.load(f)
+
+def save_dict(data: dict, filename: str):
+    with open(filename, 'wb') as f:
+        pickle.dump(data, f)
+
 # Helper function to get the video key from the chunk key
 def get_video_key(chunk_key: str) -> str:
     return chunk_key.split('_video_key:')[1].split('_chunk_id:')[0]

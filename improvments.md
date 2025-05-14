@@ -1,38 +1,51 @@
 # Additional Functionality 
 
-Realtime
-    Cache
-    Streaming
+> #### Realtime  
+>&emsp; - Cache  
+ &emsp; - Streaming
 
-Tuning 
-    Eval 
+> #### Conversation State  
+>&emsp; - Pass previous chat history  
+ &emsp; - Self RAG  
+ &emsp; - Query Augmentation  
+ &emsp; - Query Planning  
 
-Knowledge Graph
-    Topic Modeling  
+> #### Knowledge Graph  
+>&emsp; - Topic Modeling (_hierarchical_)  
+ &emsp; - KAG  
+ &emsp; - GraphRAG  
+ &emsp; - NER, entity extraction
 
-Chunks  
-    Include Overlap for Context  
-    Remove Low Signal Chunks (Advertisements)  
+> #### Chunks  
+>&emsp; - Include Overlap for Context  
+ &emsp; - Remove Low Signal Chunks (_advertisement_)  
+ &emsp; - Recursive Chunking (_hierarchical_)  
+ &emsp; - Document Chunking (_table extraction_)
 
-Conversation State  
-    Pass previous chat history  
+> #### Structured Output  
+>&emsp; - Use steerable Model  (_gpt 4.1_)  
+ &emsp; - JSON Mid Layer  
 
-Structured Output
-    Use steerable Model
-    JSON Mid Layer
+> ####  Context Collection 
+>&emsp; - Load Buisiness Knowledge  
+ &emsp; - File Inputs (_.pdf_)  
+ &emsp; - File Search (_i.e. RAG_)  
+ &emsp; - Structured Data Retrieval 
+    >> **Tools**  
+    &emsp; - ML Function Calling  
+    &emsp; - Data Function Calling (_mcp_)  
+    &emsp; - Web Search 
 
-> Context Collection  
-  >  - File Inputs (.pdf)  
-  >  - File Search  
->> **Tools**  
-&emsp; - Provide ML Function Calling  
-  >>   - Web Search 
+> #### Guardrails  
+>&emsp; - Specify Topic Contraints
 
-Guardrails
-    Specify Topic Contraints
+> #### Orchestration  
+>&emsp; - Multiagent RAG  
+    >> **Evaluation**  
+    &emsp; - Tuning (_in prompt_)  
+    &emsp; - Continuous Validation (_in production_) (model to model?)  
 
-Orchestration
-    Multiagent RAG
-    Evaluations
-        Tuning 
-        Continuous Validation
+> #### Architecture Pillars
+>&emsp; - Memory  
+ &emsp; - Reasoning  
+ &emsp; - Execution  
