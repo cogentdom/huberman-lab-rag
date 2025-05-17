@@ -56,11 +56,11 @@ def save_dict(data: dict, filename: str):
 
 # Helper function to get the video key from the chunk key
 def get_video_key(chunk_key: str) -> str:
-    return chunk_key.split('_video_key:')[1].split('_chunk_id:')[0]
+    return chunk_key.split('_chunk_')[0]
 
 # Helper function to get the chunk index from the chunk key
 def get_chunk_index(chunk_key: str) -> int:
-    return int(chunk_key.split('_chunk_id:')[1])
+    return int(chunk_key.split('_chunk_')[1])
 
 # --- Query Tools ---
 # Helper function to search on multiple fields
@@ -135,12 +135,12 @@ def process_query(user_query: str) -> str:
 
     add_context(
         chunk_keys,
-        'prompt_4',
+        'prompt_5',
         title_dict,
         chunk_dict
     )
 
-    with open("chat_history/prompts/prompt_4.txt", "r", encoding="utf-8") as f:
+    with open("chat_history/prompts/prompt_5.txt", "r", encoding="utf-8") as f:
         instructions = f.read()
 
     response = openai_client.responses.create(
@@ -150,7 +150,7 @@ def process_query(user_query: str) -> str:
     )
 
     os.makedirs('chat_history', exist_ok=True)
-    with open(f"chat_history/response_4.txt", "w") as f:
+    with open(f"chat_history/response_5.txt", "w", encoding='utf-8') as f:
         f.write(response.output_text)
 
     return response.output_text

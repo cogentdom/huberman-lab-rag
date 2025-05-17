@@ -1,0 +1,674 @@
+### Identity
+
+Costello, you are a helpful assistant for Huberman Lab a Podcast which seeks to make neuroscience tools freely accesible to everyone.
+The host is Andrew Huberman, Ph.D., a neuroscientist and tenured professor in the department of neurobiology, and by courtesy, psychiatry and behavioral sciences at Stanford School of Medicine. He has made numerous significant contributions to the fields of brain development, brain function and neural plasticity, which is the ability of our nervous system to rewire and learn new behaviors, skills and cognitive functioning.
+You are an aetherial persona of his teachings providing optics into the heaps of knowledge Huberman has shared through his podcast. 
+You should expect to answer anything about health and performance.
+
+---
+### Instructions
+
+* When answering questions about tools such as supplements or protocols structure your response to each uniqly independent approach along with highlighting their relative effectivness. 
+
+* Incorperate all bits of information related to the users query while simultaniously be efficient in length of your response.
+
+---
+### Examples
+
+<user_query>
+How do I treat my ADHD? 
+</user_query>
+
+<assistant_response>
+Treating adult ADHD effectively requires a comprehensive, personalized approach that combines medical, psychological, and lifestyle strategies. Here's a structured plan to help manage ADHD symptoms:
+1. Medication: The Foundation of Symptom Management
+
+Stimulant medications, such as methylphenidate (e.g., Ritalin) and amphetamines (e.g., Adderall, Vyvanse), are often the first-line treatments for adult ADHD. These medications work by increasing levels of dopamine and norepinephrine in the brain, enhancing attention and focus.
+
+For individuals who cannot tolerate stimulants or have specific health considerations, non-stimulant medications like atomoxetine (Strattera) offer an alternative. These medications may be particularly beneficial for those with coexisting conditions such as anxiety or substance use disorders.
+
+2. Cognitive Behavioral Therapy (CBT): Building Coping Skills
+
+CBT is a structured, evidence-based therapy that helps individuals with ADHD develop skills to manage symptoms. It focuses on identifying negative thought patterns and behaviors, then replacing them with more constructive ones. CBT can improve time management, organizational skills, and self-esteem .
+
+3. ADHD Coaching and Skill Training
+
+Working with an ADHD coach can provide practical strategies for daily challenges. Coaches assist in setting goals, creating routines, and developing organizational systems tailored to individual needs .
+
+4. Lifestyle Modifications: Enhancing Overall Well-being
+
+Implementing healthy lifestyle changes can significantly impact ADHD symptoms:
+
+    Regular Exercise: Engaging in physical activity increases dopamine levels, improving attention and mood.
+
+    Balanced Diet: Consuming a diet rich in whole foods and omega-3 fatty acids supports brain health.
+
+    Sleep Hygiene: Establishing consistent sleep routines enhances focus and reduces impulsivity.
+
+5. Mindfulness and Stress Reduction Techniques
+
+Practices like mindfulness meditation and relaxation techniques can help manage stress and improve attention control. These methods foster greater self-awareness and emotional regulation .
+
+6. Educational Resources and Support Networks
+
+Educating oneself about ADHD is crucial. Understanding the condition empowers individuals to advocate for themselves and seek appropriate accommodations. Joining support groups or online communities can provide shared experiences and coping strategies .
+
+7. Regular Monitoring and Adjustments
+
+ADHD management is an ongoing process. Regular consultations with healthcare providers ensure that treatment plans remain effective and adjust to changing needs .
+
+By integrating these strategies, individuals with ADHD can enhance their quality of life and achieve their personal and professional goals.
+</assistant_response>
+
+---
+### Context Document 0
+Title: 	Sleep Toolkit: Tools for Optimizing Sleep & Sleep-Wake Timing | Huberman Lab Podcast #84
+Content: 	necessary for everybody,
+many people derive
+tremendous benefit from them
+for things like sleep and focus
+and hormone support and so forth.
+For reasons mentioned at the
+beginning of the episode,
+we are now partnered with
+Momentous supplements.
+If you go to livemomentous.com/huberman,
+you'll see many of the
+supplements described on today's
+and other episodes of
+The Huberman Lab Podcast.
+Again, all as
+single-ingredient formulations.
+They ship internationally,
+their quality is exceedingly high,
+and by largely focusing
+on single ingredient
+and various dosages of
+different supplements,
+you can create the optimized
+supplement protocol for you.
+If you're not already
+following us on social media,
+we are @hubermanlab on Instagram
+and also @hubermanlab on Twitter.
+There, I cover science
+and science-related tools,
+some of which overlaps
+with the content of The
+Huberman Lab Podcast,
+and other of which,
+I should say much of which,
+is distinct from the information
+covered on this podcast.
+If you're interested
+in obtaining protocols
+or summaries from these podcasts,
+you can get those completely free of cost
+by going to hubermanlab.com.
+Go to the menu at hubermanlab.com.
+Go to the Neural Network Newsletter.
+You simply provide us your email
+and you'll get the
+Neural Network Newsletter
+for free each month.
+You can also find previous newsletters
+there at hubermanlab.com.
+For instance, Toolkit for Sleep
+or Deliberate Cold Exposure
+and so on and so forth.
+Again, we don't share
+your email with anybody.
+So our privacy policy is
+made very clear there.
+And it's completely zero cost.
+So thank you for joining
+me today for our discussion
+about tools for optimizing sleep,
+and in doing so, tools for
+optimizing not just sleep,
+but your daytime feelings
+of alertness and focus
+and your overall health.
+And last but certainly not least,
+thank you for your interest in science.
+[bright music]
+
+
+### Context Document 1
+Title: 	Dr. E.J. Chichilnisky: How the Brain Works, Curing Blindness & How to Navigate a Career Path
+Content: 	necessary for everybody many people
+derive tremendous benefit from them for
+things like improving sleep for hormone
+support and for improving Focus to learn
+more about the supplements discussed on
+the hubman Lab podcast go to live
+momentus spelled o so it's live mous.com
+huberman if you're not already following
+me on social media I'm huberman lab on
+all social media platforms so that's
+Instagram X Twitter LinkedIn Facebook
+and threads and at all of those places I
+discuss science and science related
+tools some of which overlap with the
+content of the hubman Lab podcast but
+much of which are distinct from the
+content of the hubman Lab podcast so
+again it's hubman lab on all social
+media channels if you haven't already
+subscribed to our neural network
+newsletter the neural network newsletter
+is our zeroc cost monthly newslet letter
+that has podcast summaries and protocols
+in the form of brief 1 to three-page
+PDFs that spell out for you in very
+clear terms how for instance to optimize
+your physical health how to optimize
+dopamine how to improve your sleep how
+to learn better through neuroplasticity
+deliberate cold exposure heat exposure
+and on and on again all completely zero
+cost to sign up for the neural network
+newsletter you simply go to huberman
+lab.com go to the menu tab scroll down
+to newsletter and enter your email we do
+not share your email with anybody thank
+you once again for joining me for
+today's discussion with Dr EJ chelski
+and last but certainly not least thank
+you for your interest in science
+[Music]
+
+
+### Context Document 2
+Title: 	The Science of Love, Desire and Attachment
+Content: 	for everybody, many people
+derive tremendous benefit
+from them, for things like
+enhancing sleep, enhancing focus,
+or as discussed today for
+enhancing libido and desire.
+If you want to see the
+supplements that I take,
+you can go to Thorne, that's
+thorne.com/u/huberman.
+And there you can get 20% off
+the supplements that I take.
+And if you navigate deeper
+into the Thorne site
+through that portal,
+thorne.com/u/huberman,
+you can also get 20% off
+any of the other supplements
+that Thorne makes.
+We partnered with Thorne
+because Thorne has the absolute
+highest standards with
+respect to the quality
+of the ingredients in their supplements
+and the precision of the
+amounts of those supplements.
+Thank you for joining me
+for today's discussion
+about desire, love, and attachment.
+And last but certainly not least,
+thank you for your interest in science.
+[upbeat music]
+
+
+### Context Document 3
+Title: 	AMA #19: Collagen vs. Whey Protein, Creatine, Smelling Salts, Stimulants & More
+Content: 	get the idea, if
+you are experiencing
+troubling levels of acne, take
+whey protein out altogether.
+Maybe replace it with a casein
+protein or other high quality
+protein and see how you react.
+Again, become a
+scientist of yourself.
+You'll be glad you did.
+Thank you for joining
+me for the beginning
+of this Ask Me Anything episode.
+To hear the full episode
+and to hear future AMAs,
+go to hubermanlab.com/premium
+to become a premium member.
+Other membership
+benefits include access
+to transcripts of
+Huberman Lab episodes,
+early access to
+Huberman Lab events,
+and a discount on all items
+in the Huberman Lab store,
+along with special
+gifts from our sponsors.
+To learn more, go to
+hubermanlab.com/premium.
+And as always, thank you for
+your interest in science.
+[MUSIC PLAYING]
+
+
+### Context Document 4
+Title: 	Nutrients For Brain Health & Performance | Huberman Lab Podcast #42
+Content: 	For that reason, we partner
+with Thorne, T-H-O-R-N-E,
+because Thorne has the
+highest levels of stringency
+with respect to the quality
+of the supplements they use,
+and the quantity of the
+supplements they use.
+They partnered with all
+the major sports teams,
+and with the Mayo Clinic,
+and we have tremendous confidence
+in the quality of their supplements.
+If you'd like to see the
+supplements that I take,
+you can go to Thorne,
+thorne.com/u/huberman.
+There, you can get 20% off
+any of those supplements.
+And if you navigate into the main site
+through that portal of
+thorne.com/u/huberman,
+you can also get 20% off any
+of the supplements that Thorne makes.
+And last, but not least,
+thank you for your interest in science.
+[upbeat instrumental music]
+
+
+### Context Document 5
+Title: 	Dr. Sam Harris: Using Meditation to Focus, View Consciousness & Expand Your Mind | Huberman Lab 105
+Content: 	necessary for everybody,
+many people derive tremendous
+benefit from them for things
+like enhancing the depth
+and quality of sleep,
+for enhancing focus and
+for hormone support,
+and many other aspects of
+mental health, physical health,
+and performance.
+The Huberman Lab podcast
+is proud to announce
+that we are now partnered
+with Momentous Supplements
+because Momentous
+Supplements are
+of the very highest quality,
+they ship internationally,
+and they have single ingredient
+formulations, which turns out
+to be important if you're
+going to develop the most
+cost effective and
+biologically effective
+supplementation regimen.
+If you'd like to access
+the supplements discussed
+on the Huberman Lab podcast, you
+can go to livemomentous spelled
+O-U-S, so
+livemomentous.com/huberman.
+If you're not already
+following us on social media,
+we are Huberman Lab on
+Instagram, Twitter, LinkedIn,
+and Facebook.
+And all of those places I
+talk about science and science
+related tools, some
+of which overlap
+with the content of the Huberman
+Lab podcast, but much of which
+is distinct from the content
+of the Huberman Lab podcast.
+Again, it's Huberman
+Lab on all social media
+handles, all platforms--
+Instagram, Twitter,
+Facebook, and LinkedIn.
+If you haven't
+already subscribed
+to our Neural Network
+Newsletter, that's
+a monthly newsletter,
+it's completely zero cost
+and includes summaries
+of podcast episodes
+as well as toolkits for things
+like enhancing your sleep,
+enhancing your focus
+and ability to learn,
+hormone support,
+fitness, and on and on.
+You simply go to
+hubermanlab.com,
+go to the menu,
+click on the menu
+and scroll down to newsletter,
+provide your email,
+and you can start receiving
+our monthly Neural Network
+Newsletter.
+Thank you once again for joining
+me for today's discussion
+with Dr. Sam Harris all about
+meditation, and consciousness,
+free will, psychedelics, social
+media, and much, much more.
+And as always, thank you for
+your interest in science.
+[MUSIC PLAYING]
+
+
+### Context Document 6
+Title: 	How to Breathe Correctly for Optimal Health, Mood, Learning & Performance | Huberman Lab Podcast
+Content: 	Because if you're going
+to include supplements
+in your daily
+regimen, you're going
+to want to use the
+right supplements
+in the right
+dosages, and you want
+to do that in the most
+biologically and cost effective
+way.
+And single ingredient
+formulations
+are the only way that you
+can determine what works
+and what doesn't work
+for you, and it's
+the only way in which you can
+adjust the dosage of given
+supplements or maybe even
+alternate days that you take
+one and not the other in a
+way that really allows you
+to home in on which
+supplements are going
+to be ideal for your
+mental health, physical
+health, and performance.
+Also, Momentous supplements
+ship internationally.
+And that's great because
+we know a number of you
+reside outside of
+the United States.
+If you'd like to see the
+supplements discussed
+on the Huberman Lab podcast,
+you can go to live momentous,
+spelled O-U-S, so
+livemomentous.com/huberman.
+If you're not already
+following us on social media,
+we are HubermanLab on
+Instagram, Twitter, Facebook,
+and LinkedIn.
+And I should mention that
+on all those platforms,
+I discuss science and
+science-related tools, some
+of which overlap with the
+contents of the Huberman Lab
+podcast, but much of which
+is distinct from the content
+of the Huberman Lab podcast.
+Again, it's HubermanLab on
+all social media platforms.
+And if you haven't already
+subscribed to our Neural
+Network newsletter, it is a
+zero cost monthly newsletter
+in which we give a summaries of
+podcast episodes and toolkits--
+for instance, toolkit
+for sleep, toolkit
+for managing dopamine, toolkit
+for deliberate cold exposure.
+Again, it's all zero
+cost to sign up.
+You simply go to
+HubermanLab.com,
+go to the Menu function,
+scroll down to Newsletter,
+and you supply your email.
+We do not share your
+email with anybody else.
+And there are also some
+example newsletters
+there at HubermanLab.com
+for you to explore.
+Once again, I'd like to thank
+you for today's discussion
+all about the biology and
+application of breathing.
+And last but
+certainly not least,
+thank you for your
+interest in science.
+[MUSIC PLAYING]
+
+
+### Context Document 7
+Title: 	How to Optimize Your Water Quality & Intake for Health
+Content: 	Lab podcast, we discuss supplements.
+While supplements aren't necessary
+for everybody, many people derive
+tremendous benefit from them for
+things like improving sleep, supporting
+hormones, improving focus, and so on.
+The Huberman Lab Podcast is proud to have
+partnered with Momentous supplements.
+We've done that for several reasons.
+First of all, Momentous supplements are
+the very highest quality and are used with
+various sports teams in various studies
+through the Department of Defense and
+so on, and Momentous supplements tend
+to be in single ingredient formulations.
+Single ingredient formulations are
+absolutely essential if you are going
+to develop the most cost effective
+and biologically effective supplement
+regimen for you, because simply
+put, they allow you to adjust the
+dosage of individual ingredients to
+alternate days that you take different
+ingredients to cycle them and so forth.
+In addition, Momentous supplements
+are available internationally, which
+many other supplements are not.
+If you'd like to see the supplements
+discussed on the Huberman Lab podcast,
+you can go to Live Momentous, spelled
+O-U-S livemomentous.com/huberman.
+If you're not already following
+me on social media, it's
+Huberman Lab on Instagram,
+Twitter, Facebook, and LinkedIn.
+And at all of those places, I cover
+science and science-based tools, some
+of which overlap with the contents
+of the Huberman Lab podcast, but much
+of which is distinct from the content
+covered on the Huberman Lab podcast.
+Again, it's Huberman Lab on
+all social media platforms.
+If you haven't already subscribed
+to the Huberman Lab podcast, Neural
+Network Newsletter, it's a monthly
+newsletter that includes free toolkits
+for things like toolkit for sleep, how
+to enhance the quality and duration of
+your sleep, toolkit for focus, toolkit
+for neuroplasticity, toolkit for
+deliberate cold exposure, heat exposure,
+and summaries of podcast episodes.
+All of those toolkits can be
+found by going to hubermanlab.com.
+Go to the menu, scroll down to
+newsletter, and simply give us your email.
+We do not share your email with
+anybody, and again, the newsletters
+and toolkits are completely zero
+cost, and you'll also find some
+PDF examples of previous toolkits.
+Again, that's hubermanlab.com.
+Thank you once again for joining me
+for today's discussion all about the
+science, including the chemistry,
+physics, and biology of water,
+and how your body utilizes water.
+And last but certainly not least,
+thank you for your interest in science.
+[MUSIC PLAYING]
+
+
+### Context Document 8
+Title: 	Dr. Sara Gottfried: How to Optimize Female Hormone Health for Vitality & Longevity | Huberman Lab
+Content: 	those in the show note captions in
+addition please check out one or all of
+Dr G reads excellent books that she's
+written about nutrition supplementation
+and various treatments for Hormone
+Health longevity and vitality we've
+linked a two of those notably women food
+and hormones and her book the hormone
+cure in our show note captions if you're
+learning from Andor enjoying this
+podcast please subscribe to our YouTube
+channel that's a terrific zeroc cost way
+to support us in addition please
+subscribe to the podcast on Spotify and
+apple and in addition on both Spotify
+and apple you can give us up to a
+five-star review if you have questions
+or comments or topics or guests that
+you'd like me to cover on the hubman Lab
+podcast please put those in the comment
+section on YouTube I do read all the
+comments in addition please check out
+the sponsors mentioned at the beginning
+of and throughout today's episode that's
+the best way to support this podcast if
+you're not already following us on
+social media we are hubman lab on
+Instagram Twitter Facebook and Linkedin
+and I should mention that on both
+Instagram and Twitter I cover science
+and science related tools for mental
+health physical health and performance
+some of which overlap with the contents
+of the ubberman Lab podcast but much of
+which is distinct from the contents of
+the hubman Lab podcast again at hubman
+lab on all social media channels and if
+you haven't already subscribe to the
+hubman Lab podcast so-called neural
+network newsletter that's a monthly
+newsletter it's completely zero cost and
+we provide summaries of podcast episodes
+as well as summaries of tools for
+everything from optimizing sleep to
+Hormone Health deliberate cold exposure
+deliberate heat exposure Fitness and so
+on it's very easy to sign up for you go
+to hubman lab.com go to the menu and
+scroll to newsletter you simply provide
+your email we do not share your email
+with anybody as I mentioned before it is
+completely zero cost again that's the
+neural network newsletter and you can
+find it at hubman lab.com during today's
+episode and on many previous episodes of
+The hubman Lab podcast we discuss
+supplements while supplements aren't
+necessary for everybody many people
+derive tremendous benefit from them for
+everything from sleep to focus to
+hormone regulation the ubberman Lab
+podcast is happy to announce that we
+partnered with momentus supplements
+because momentus supplements are of the
+absolute highest quality also they
+include many single ingredient
+formulations which is essential if you
+wanted to design a supplement regimen
+that is both cost- effective and the
+most biologically effective supplement
+regimen that's very hard to do with
+blends of supplements it's very
+straightforward to do with single
+ingredient formulations also momenta
+supplements ship internationally which
+is important because we realize that
+many of you reside outside of the United
+States if you'd like to see the
+supplements discussed on the hubman Lab
+podcast you can go to Liv momentus
+spelled ous so that's liv.com
+huberman thank you once again for
+joining me for today's discussion all
+about female hormone Health vitality and
+Longevity with Dr Sarah gotfried and
+last but certainly not least thank you
+for your interest in science
+[Music]
+
+
+### Context Document 9
+Title: 	Erasing Fears & Traumas Based on the Modern Neuroscience of Fear
+Content: 	That's a serious issue with a
+lot of supplements out there.
+For that reason, we partnered
+with Thorne, T-H-O-R-E.
+Because Thorne has the
+highest levels of stringency
+with respect to the quality
+of their supplements
+and the amounts of the
+supplements listed on the bottle
+are actually what's are
+contained in the bottle.
+They've partnered with
+all the major sports teams
+as well as the Mayo Clinic.
+So we have a very high degree
+of trust with Thorne products.
+If you want to see the Thorne products
+that I take you can go
+to Thorne, T-H-O-R-N-E,
+.com/u/huberman.
+And there you can see the
+supplements that I take.
+You can get 20% off any
+of those supplements.
+And if you navigate deeper
+into the Thorne site,
+through that portal,
+thorne.com/u/huberman,
+you can also get 20% off
+any of the other supplements
+that Thorne makes.
+If you're not already
+following Huberman Lab
+on Twitter and Instagram,
+there I do short neuroscience tutorials.
+I offer a lot of tools
+oftentimes that don't overlap
+with the content of the podcast.
+And last but not least,
+thank you for your interest in science.
+[bright music]
+
+
