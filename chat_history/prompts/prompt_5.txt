@@ -135,51 +135,6 @@ thank you for your interest in science.
 
 
 ### Context Document 1
-Title: 	Dr. E.J. Chichilnisky: How the Brain Works, Curing Blindness & How to Navigate a Career Path
-Content: 	necessary for everybody many people
-derive tremendous benefit from them for
-things like improving sleep for hormone
-support and for improving Focus to learn
-more about the supplements discussed on
-the hubman Lab podcast go to live
-momentus spelled o so it's live mous.com
-huberman if you're not already following
-me on social media I'm huberman lab on
-all social media platforms so that's
-Instagram X Twitter LinkedIn Facebook
-and threads and at all of those places I
-discuss science and science related
-tools some of which overlap with the
-content of the hubman Lab podcast but
-much of which are distinct from the
-content of the hubman Lab podcast so
-again it's hubman lab on all social
-media channels if you haven't already
-subscribed to our neural network
-newsletter the neural network newsletter
-is our zeroc cost monthly newslet letter
-that has podcast summaries and protocols
-in the form of brief 1 to three-page
-PDFs that spell out for you in very
-clear terms how for instance to optimize
-your physical health how to optimize
-dopamine how to improve your sleep how
-to learn better through neuroplasticity
-deliberate cold exposure heat exposure
-and on and on again all completely zero
-cost to sign up for the neural network
-newsletter you simply go to huberman
-lab.com go to the menu tab scroll down
-to newsletter and enter your email we do
-not share your email with anybody thank
-you once again for joining me for
-today's discussion with Dr EJ chelski
-and last but certainly not least thank
-you for your interest in science
-[Music]
-
-
-### Context Document 2
 Title: 	The Science of Love, Desire and Attachment
 Content: 	for everybody, many people
 derive tremendous benefit
@@ -215,43 +170,7 @@ thank you for your interest in science.
 [upbeat music]
 
 
-### Context Document 3
-Title: 	AMA #19: Collagen vs. Whey Protein, Creatine, Smelling Salts, Stimulants & More
-Content: 	get the idea, if
-you are experiencing
-troubling levels of acne, take
-whey protein out altogether.
-Maybe replace it with a casein
-protein or other high quality
-protein and see how you react.
-Again, become a
-scientist of yourself.
-You'll be glad you did.
-Thank you for joining
-me for the beginning
-of this Ask Me Anything episode.
-To hear the full episode
-and to hear future AMAs,
-go to hubermanlab.com/premium
-to become a premium member.
-Other membership
-benefits include access
-to transcripts of
-Huberman Lab episodes,
-early access to
-Huberman Lab events,
-and a discount on all items
-in the Huberman Lab store,
-along with special
-gifts from our sponsors.
-To learn more, go to
-hubermanlab.com/premium.
-And as always, thank you for
-your interest in science.
-[MUSIC PLAYING]
-
-
-### Context Document 4
+### Context Document 2
 Title: 	Nutrients For Brain Health & Performance | Huberman Lab Podcast #42
 Content: 	For that reason, we partner
 with Thorne, T-H-O-R-N-E,
@@ -282,92 +201,7 @@ thank you for your interest in science.
 [upbeat instrumental music]
 
 
-### Context Document 5
-Title: 	Dr. Sam Harris: Using Meditation to Focus, View Consciousness & Expand Your Mind | Huberman Lab 105
-Content: 	necessary for everybody,
-many people derive tremendous
-benefit from them for things
-like enhancing the depth
-and quality of sleep,
-for enhancing focus and
-for hormone support,
-and many other aspects of
-mental health, physical health,
-and performance.
-The Huberman Lab podcast
-is proud to announce
-that we are now partnered
-with Momentous Supplements
-because Momentous
-Supplements are
-of the very highest quality,
-they ship internationally,
-and they have single ingredient
-formulations, which turns out
-to be important if you're
-going to develop the most
-cost effective and
-biologically effective
-supplementation regimen.
-If you'd like to access
-the supplements discussed
-on the Huberman Lab podcast, you
-can go to livemomentous spelled
-O-U-S, so
-livemomentous.com/huberman.
-If you're not already
-following us on social media,
-we are Huberman Lab on
-Instagram, Twitter, LinkedIn,
-and Facebook.
-And all of those places I
-talk about science and science
-related tools, some
-of which overlap
-with the content of the Huberman
-Lab podcast, but much of which
-is distinct from the content
-of the Huberman Lab podcast.
-Again, it's Huberman
-Lab on all social media
-handles, all platforms--
-Instagram, Twitter,
-Facebook, and LinkedIn.
-If you haven't
-already subscribed
-to our Neural Network
-Newsletter, that's
-a monthly newsletter,
-it's completely zero cost
-and includes summaries
-of podcast episodes
-as well as toolkits for things
-like enhancing your sleep,
-enhancing your focus
-and ability to learn,
-hormone support,
-fitness, and on and on.
-You simply go to
-hubermanlab.com,
-go to the menu,
-click on the menu
-and scroll down to newsletter,
-provide your email,
-and you can start receiving
-our monthly Neural Network
-Newsletter.
-Thank you once again for joining
-me for today's discussion
-with Dr. Sam Harris all about
-meditation, and consciousness,
-free will, psychedelics, social
-media, and much, much more.
-And as always, thank you for
-your interest in science.
-[MUSIC PLAYING]
-
-
-### Context Document 6
+### Context Document 3
 Title: 	How to Breathe Correctly for Optimal Health, Mood, Learning & Performance | Huberman Lab Podcast
 Content: 	Because if you're going
 to include supplements
@@ -459,7 +293,7 @@ interest in science.
 [MUSIC PLAYING]
 
 
-### Context Document 7
+### Context Document 4
 Title: 	How to Optimize Your Water Quality & Intake for Health
 Content: 	Lab podcast, we discuss supplements.
 While supplements aren't necessary
@@ -534,7 +368,7 @@ thank you for your interest in science.
 [MUSIC PLAYING]
 
 
-### Context Document 8
+### Context Document 5
 Title: 	Dr. Sara Gottfried: How to Optimize Female Hormone Health for Vitality & Longevity | Huberman Lab
 Content: 	those in the show note captions in
 addition please check out one or all of
@@ -626,49 +460,384 @@ for your interest in science
 [Music]
 
 
-### Context Document 9
-Title: 	Erasing Fears & Traumas Based on the Modern Neuroscience of Fear
-Content: 	That's a serious issue with a
-lot of supplements out there.
-For that reason, we partnered
-with Thorne, T-H-O-R-E.
-Because Thorne has the
-highest levels of stringency
-with respect to the quality
-of their supplements
-and the amounts of the
-supplements listed on the bottle
-are actually what's are
-contained in the bottle.
-They've partnered with
-all the major sports teams
-as well as the Mayo Clinic.
-So we have a very high degree
-of trust with Thorne products.
-If you want to see the Thorne products
-that I take you can go
-to Thorne, T-H-O-R-N-E,
-.com/u/huberman.
-And there you can see the
-supplements that I take.
-You can get 20% off any
-of those supplements.
-And if you navigate deeper
-into the Thorne site,
-through that portal,
-thorne.com/u/huberman,
-you can also get 20% off
-any of the other supplements
-that Thorne makes.
-If you're not already
-following Huberman Lab
-on Twitter and Instagram,
-there I do short neuroscience tutorials.
-I offer a lot of tools
-oftentimes that don't overlap
-with the content of the podcast.
+### Context Document 6
+Title: 	Science of Muscle Growth, Increasing Strength & Muscular Recovery
+Content: 	is to tell your friends, tell
+your neighbors, tell anyone
+that you think might benefit
+from the information.
+The way this podcast is set
+up, the information is batched
+into four or five episodes, all centered
+around a given theme or topic
+like hormones, like sleep.
+So the episodes on sleep, for instance
+that were way back in January,
+and what seems like way back
+are still every bit as relevant today
+as they were back in January for somebody
+that has challenges with sleep
+and wants to understand
+sleep and get better at sleep
+or wants to understand their
+dreams or how to use sleep
+and dreaming to leverage
+neuroplasticity and learning.
+So if you pass information
+along about the podcast,
+that's great.
+We also have a Patreon.
+You can go to patreon.com/andrewhuberman.
+There, you can support the podcast
+at any level that you like.
+And as always, please
+put your questions about
+the podcast episodes and
+suggestions for future episodes.
+In the comment section.
+I really do read through
+all those comments.
+It takes me some time, but
+I do read through those.
+I reply to as many of them
+as I can, but I do read them.
+And they're great way
+for us to get feedback.
+On Apple you can give
+us a five-star review
+if you think we deserve that.
+And if you want to do all
+these things you're welcome to,
+if you want to do just one
+of them, we understand.
+And if you do none of
+them, we still appreciate
+that you come here to
+digest the information
+about science and science-related tools.
+In today's episode, I
+mentioned various supplements,
+various compounds that
+if you deem it right
+and safe for you can
+benefit athletic performance
+and muscle physiology, et cetera.
+We've partnered with Thorne T-H-O-R-N-E
+because Thorne supplements we believe are
+of the highest possible
+stringency in quality.
+What you see on the bottle
+is what's in the bottle
+and the quality of
+ingredients that they include
+are excellent.
+So much so that they
+partner with the Mayo Clinic
+and all the major sports teams.
+If you go to Thorne
+T-H-O-R-N-E.com/u/huberman,
+you can see all the
+supplements that I take
+and you can get 20% off
+any of those supplements
+as well as 20% off any
+of the other supplements
+that Thorne sells.
+So if you go to thorne.com/u/huberman
+any of those supplements listed there
+and then if you navigate
+through their site
+and you find something else that you like
+will be 20% off at checkout.
+Last but not least, I want to thank you
+for your time and attention today.
+And as always, thank you for
+your interest in science.
+[bright upbeat music]
+
+
+### Context Document 7
+Title: 	How Our Hormones Control Our Hunger, Eating & Satiety
+Content: 	between the various hormones.
+But that's too much of a deep dive of now.
+Right now, we've just focused today mainly
+on things like ghrelin, on things like,
+Melanocyte simulating hormone,
+incredible powerful hormone
+that can suppress appetite.
+On things like Cholecystokinin
+that comes from the gut
+and can suppress appetite.
+On things like food emulsifiers.
+On the fact that when you're eating
+you are amino acids seeking,
+even though you might not realize it.
+That you are also seeking
+out particular fatty acids
+in particular, the conjugated
+linoleic acids and Omega-3's.
+So I've tried to give you a
+number of actionable tools.
+Many of them behavioral.
+Some of them are based on supplements
+or even prescription drugs.
+Again, always do what's
+best for your health,
+and do that in company with
+a healthcare professional.
+I'm not a physician, I
+don't prescribe anything.
+I'm a professor, I
+profess a lot of things.
+And I try and share with you
+what I think to be the best
+high quality peer reviewed literature.
+So that's what I've done today.
+Really appreciate your time and intention.
+Many of you have continued to ask
+how you can help support the podcast.
+And we really appreciate the question.
+There's several ways to do that.
+The first is to like a
+video that you've seen
+if you like it, and please
+subscribe to the YouTube channel.
+That's perhaps the most important thing
+about the YouTube channel.
+As well, leave us a comment.
+If you leave us a comment
+in the comment section
+that helps us.
+And please ask questions.
+Those questions and your comments
+do inform content of future episodes.
+We read them all.
+Except the negative ones we don't read,
+I'm just kidding, we read them all.
+In addition, please subscribe
+on Apple and/or Spotify
+or both if you like.
+And on Apple, you have the
+opportunity to leave us
+up to a five star review if
+you feel we deserve that.
+Apple also lets you leave a comment,
+some feedback for us as well.
+Please do check out our sponsors
+that we mentioned at the
+beginning of the podcast.
+That's the best way perhaps
+to support the podcast.
+As well we have a Patreon account.
+It's patreon.com/andrewhuberman.
+And there you can support the
+podcast at any level you like.
+And today, as well as
+in previous episodes,
+I've mentioned various supplements.
+If you're interested in
+seeing what supplements I take
+and you want to explore for
+some other supplements as well,
+you can go to Thorne
+T-H-O-R-N-E.com slash U, the
+letter U, slash Huberman.
+Thorne is a supplement company
+that we believe to have
+the highest stringency
+in terms of what they put
+in the various supplements that they make.
+And the amounts that they
+put are very accurate.
+They've partnered with the Mayo Clinic.
+They partnered with all
+the major sports teams.
+And we've partnered with them
+because we believe in
+their levels of stringency
+and accuracy.
+If you go to thorne.com/u/huberman,
+you can see what I take
+and you'll also get 20% off
+any of those supplements
+or any of the other
+supplements that Thorne makes.
+So that's where you can find
+out more about supplements
+and the ones that I take.
+And again, you get the 20% discount
+on any supplements that Thorne makes.
 And last but not least,
+thank you for being with us.
+I hope you learned a lot.
+I hope you explore some of the tools
+and that the mechanistic
+information that you learned today
+will serve you well.
+If you know anyone that's
+interested in this topic
+or you think that someone
+could benefit from it,
+please suggest the
+podcast to them as well.
+And most of all, thank you
+for your interest in science.
+[upbeat music]
+
+
+### Context Document 8
+Title: 	Understanding & Controlling Aggression | Huberman Lab Podcast #71
+Content: 	that we are now partnered
+with Momentous supplements
+because we believe
+Momentous supplements to be
+of the very highest quality
+of any supplements out there.
+And we've been working
+very closely with them
+in order to direct them,
+to create supplements
+that are individual ingredient supplements
+of the particular quality and sources
+that we would like to see,
+and that relate to the
+science and studies covered
+on the Huberman Lab Podcast.
+If you'd like to see some
+of those supplements,
+you can go to livemomentous.com/huberman,
+and there you'll see
+some of the supplements
+that we've talked about
+on this podcast before
+such as magnesium threonate
+for augmenting sleep,
+things like L-tyrosine
+for augmenting dopamine
+and things like L-carnitine,
+which we've discussed
+on today's podcast.
+Right now, the list of
+supplements and the products
+that are there is only partial to what
+will soon be included in the future.
+So that's an ever expanding
+catalog of, again,
+what we believe to be
+the very highest quality
+supplements available to you.
+For those of you that are
+interested in behavioral,
+nutritional and supplementation
+based tools for neuroscience
+and other aspects of
+your biology, the impact,
+your health and performance,
+we have a newsletter.
+It is a zero cost newsletter.
+It's called "The Neural
+Network Newsletter."
+You can go to hubermanlab.com
+and there in the menu,
+you'll find "The Neural
+Network Newsletter" sign-up.
+You can just put your email.
+We do not share your
+email with anybody else.
+You will also find
+examples of the newsletter
+that you can download right
+away without having to sign up
+and decide if signing up is right for you.
+And if you're not already following us
+on Twitter an Instagram,
+we are Huberman Lab on
+both Instagram and Twitter.
+And at both places,
+I describe science and
+science based tools,
+some of which overlaps with the content
+of the Huberman Lab Podcast,
+but much of which is
+distinct from the content
+of the Huberman Lab Podcast.
+Once again, thank you for
+joining me for our discussion
+about the biology, psychology
+and actionable tools
+around aggression, and as always,
 thank you for your interest in science.
-[bright music]
+[inspirational music]
+
+
+### Context Document 9
+Title: 	How to Increase Motivation & Drive
+Content: 	on Apple or Spotify or both
+that's a great help to us.
+And on Apple, you have the
+opportunity to leave us
+up to a five star review.
+We do use the comment
+section here on YouTube to
+inform future content and
+to address any questions
+and clear up any miss communications
+or misconceptions that might arise.
+So please put your
+questions, your comments
+and your suggestions for future content.
+In the comment section below.
+The other way to support us is to check
+out our sponsors that were mentioned
+at the beginning of the podcast.
+The links to those sponsors
+are in the captions.
+As well we've set up a Patreon account
+which is patreon.com/andrewhuberman.
+That allows you to support the podcast
+at any level that you like as well.
+Because we mentioned supplements
+from time to time throughout the podcast
+and people always ask about what brands
+and sources we use or suggest
+for those supplements.
+We partnered with Thorne
+T-H-O-R-N-E Thorne
+supplements are known to be
+among the most stringent supplements
+in terms of the specificity of what's
+in the bottle matches what's on the label.
+The quality of the ingredients
+is exceedingly high
+the Mayo Clinic
+and all the major sports
+organizations are partnered
+with Thorne because of that stringency
+and that commitment to rigor.
+If you'd like to see the supplements
+that I personally take
+as well as get 20% off any
+of the supplements that
+Thorne makes you can go
+to thorne.com/u, that's the letter
+U, slash Huberman (thorne.com/u/huberman).
+And you can see what I take
+and any of those supplements
+as well as any of the other products
+on the Thorne site will be available
+to you at 20% off that's
+thorne.com/u/huberman
+to get 20% off any of the
+supplements that Thorne makes.
+Finally, I wanna thank you
+for your time and attention today.
+I hope you learned a lot
+and that you learned a lot
+of possible tools that
+you could incorporate
+into your life as it relates
+to motivation and emotion.
+Thank you for your interest in science.
+(soft music)
 
 
