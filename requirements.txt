@@ -18,3 +18,7 @@ jupyterlab==4.4.1
 jupyter-collaboration==4.0.2
 ipykernel
 # datalayer_pycrdt==0.12.15
+langchain-openai
+langchain
+pyvis
+gradio==4.44.1
