@@ -11,6 +11,43 @@ The Huberman Lab RAG (Retrieval-Augmented Generation) system is an intelligent c
 
 Dr. Andrew Huberman, Ph.D., is a neuroscientist and tenured professor at Stanford School of Medicine who has made significant contributions to brain development, brain function, and neural plasticity research. The Huberman Lab podcast aims to make neuroscience tools freely accessible to everyone. This RAG system extends that mission by creating an intelligent assistant named "Costello" that can answer questions about health and performance using the vast knowledge contained within podcast transcripts.
 
+## 📊 Data Sources & Content
+
+### Primary Data Source
+All content in this RAG system is derived from **publicly available Huberman Lab podcast episodes** hosted on YouTube. The system contains no private, personal, or confidential information.
+
+### Content Details
+- **Source**: [Huberman Lab YouTube Channel](https://www.youtube.com/@hubermanlab)
+- **Content Type**: Auto-generated YouTube transcripts from podcast episodes
+- **Episodes Covered**: 290+ episodes (as of data collection)
+- **Topics Include**:
+  - Sleep optimization and circadian rhythms
+  - Nutrition and supplementation
+  - Exercise and physical performance
+  - Mental health and stress management
+  - Learning and neuroplasticity
+  - Vision and eye health
+  - Hormones and endocrine function
+  - And many more neuroscience-backed health topics
+
+### Data Processing
+1. **Collection**: YouTube URLs and metadata scraped using `youtube_get_data.ipynb`
+2. **Transcription**: Transcripts obtained via YouTube Transcript API using `youtube_transcript_gen.ipynb`
+3. **Storage**: Raw transcripts stored as text files in `data/documents/`
+4. **Processing**: Content chunked and embedded using OpenAI's text-embedding-3-small model
+5. **Indexing**: Vector embeddings stored in Redis for efficient semantic search
+
+### Content Integrity
+- **No Modification**: Transcript content is used as-is from YouTube's auto-generated transcripts
+- **Attribution**: All responses cite the original Huberman Lab podcast content
+- **Educational Purpose**: Content used under fair use for educational and research purposes
+- **Public Domain**: All source material is freely accessible public content
+
+### Data Transparency
+- **Complete Episode List**: Available in `data/huberman_videos.csv`
+- **Transparent Processing**: All data pipeline code is open source
+- **Reproducible**: Users can regenerate the entire dataset using provided notebooks
+
 ## 🚀 Features
 
 ### Intelligent Query Processing
@@ -52,10 +89,36 @@ cd huberman-lab-rag
 ```
 
 ### 2. Environment Setup
-Create a `.env` file in the root directory:
-```bash
-OPENAI_API_KEY=your_openai_api_key_here
-```
+
+**Important**: You must create a `.env` file to store your OpenAI API key securely.
+
+#### Step-by-step .env file creation:
+
+1. **Create the .env file** in the project root directory:
+   ```bash
+   touch .env
+   ```
+   Or on Windows:
+   ```cmd
+   type nul > .env
+   ```
+
+2. **Add your OpenAI API key** to the `.env` file:
+   ```bash
+   echo "OPENAI_API_KEY=your_actual_api_key_here" >> .env
+   ```
+   Or manually edit the `.env` file and add:
+   ```
+   OPENAI_API_KEY=your_actual_api_key_here
+   ```
+
+3. **Get your OpenAI API key**:
+   - Visit [OpenAI Platform](https://platform.openai.com/api-keys)
+   - Create an account or sign in
+   - Generate a new API key
+   - Replace `your_actual_api_key_here` with your actual key
+
+**⚠️ Security Note**: The `.env` file is automatically excluded from git via `.gitignore` to keep your API key secure. Never commit API keys to version control.
 
 ### 3. Create Data Directory
 ```bash
