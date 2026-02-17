@@ -3,6 +3,8 @@
 ![Python](https://img.shields.io/badge/python-v3.12+-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
+![banner](https://cogentdom.wordpress.com/wp-content/uploads/2026/02/huberman-lab-rag-interface.png)
+
 ## Overview
 
 The Huberman Lab RAG (Retrieval-Augmented Generation) system is an intelligent conversational AI platform that makes neuroscience knowledge from the Huberman Lab podcast freely accessible to everyone. This system serves as an ethereal persona of Dr. Andrew Huberman's teachings, providing expert insights into health, performance, and neuroscience topics based on the extensive content library from his podcast episodes.
