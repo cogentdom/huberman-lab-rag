@@ -1,0 +1,5 @@
+Backup created: Thu Jun 19 12:01:19 MDT 2025
+Redis version: redis_version:7.4.4
+Database size: 297 keys
+Search indices: embeddings-index 
+Container status:        1 containers

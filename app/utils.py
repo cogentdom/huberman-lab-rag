@@ -22,17 +22,17 @@ load_dotenv()
 open_api_key = os.getenv("OPENAI_API_KEY")
 openai_client = openai.OpenAI(api_key=open_api_key)
 
-REDIS_HOST =  "localhost"
-REDIS_PORT = 6379
-REDIS_PASSWORD = "" # default for passwordless Redis
+# Redis connection configuration with environment variable support
+REDIS_HOST = os.getenv("REDIS_HOST", "localhost")
+REDIS_PORT = int(os.getenv("REDIS_PORT", 6379))
+REDIS_PASSWORD = os.getenv("REDIS_PASSWORD", "")
 
 # Connect to Redis
 redis_client = redis.Redis(
     host=REDIS_HOST,
     port=REDIS_PORT,
-    password=REDIS_PASSWORD
+    password=REDIS_PASSWORD if REDIS_PASSWORD else None
 )
-redis_client.ping()
 
 # Save the defaultdict to a file
 def save_defaultdict(data, filename):
@@ -106,18 +106,36 @@ def add_context(
     title_dict: dict,
     chunk_dict: dict,
 ):
-    with open(f'data/prompt.txt', 'r', encoding='utf-8') as f:
+    import os
+    # Get the directory where this script is located
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    prompt_path = os.path.join(script_dir, 'prompt.txt')
+    
+    with open(prompt_path, 'r', encoding='utf-8') as f:
         prompt = f.read()
 
     for i, chunk_key in enumerate(chunk_keys):
         video_key = get_video_key(chunk_key)
+        
+        if video_key not in title_dict:
+            continue
+            
+        if chunk_key not in chunk_dict:
+            continue
+            
         prompt = f"{prompt}### Context Document {i}\nTitle: \t{title_dict[video_key]}\nContent: \t{chunk_dict[chunk_key]}\n\n\n"
 
-    os.makedirs('chat_history/prompts', exist_ok=True)
-    with open(f"chat_history/prompts/{file_name}.txt", "w") as f:
+    chat_history_dir = os.path.join(script_dir, 'chat_history', 'prompts')
+    os.makedirs(chat_history_dir, exist_ok=True)
+    output_path = os.path.join(chat_history_dir, f"{file_name}.txt")
+    with open(output_path, "w") as f:
         f.write(prompt)
 
 def process_query(user_query: str) -> str:
+    import os
+    # Get the directory where this script is located
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    
     results = search_redis(
         openai_client, 
         redis_client, 
@@ -128,9 +146,12 @@ def process_query(user_query: str) -> str:
 
     chunk_keys = [x.chunk_key for x in results]
 
-    with open('data/title_dict.pkl', 'rb') as f:
+    title_dict_path = os.path.join(script_dir, 'data', 'title_dict.pkl')
+    chunk_dict_path = os.path.join(script_dir, 'data', 'chunk_dict.pkl')
+    
+    with open(title_dict_path, 'rb') as f:
         title_dict = pickle.load(f)
-    with open('data/chunk_dict.pkl', 'rb') as f:
+    with open(chunk_dict_path, 'rb') as f:
         chunk_dict = pickle.load(f)
 
     add_context(
@@ -140,18 +161,27 @@ def process_query(user_query: str) -> str:
         chunk_dict
     )
 
-    with open("chat_history/prompts/prompt_5.txt", "r", encoding="utf-8") as f:
+    prompt_file_path = os.path.join(script_dir, 'chat_history', 'prompts', 'prompt_5.txt')
+    with open(prompt_file_path, "r", encoding="utf-8") as f:
         instructions = f.read()
 
-    response = openai_client.responses.create(
-        model="o4-mini",
-        instructions=instructions,
-        input=user_query,
+    # Fix OpenAI API call - use chat.completions.create instead of responses.create
+    response = openai_client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[
+            {"role": "system", "content": instructions},
+            {"role": "user", "content": user_query}
+        ],
+        max_tokens=1000,
+        temperature=0.7
     )
 
-    os.makedirs('chat_history', exist_ok=True)
-    with open(f"chat_history/response_5.txt", "w", encoding='utf-8') as f:
-        f.write(response.output_text)
+    chat_history_dir = os.path.join(script_dir, 'chat_history')
+    os.makedirs(chat_history_dir, exist_ok=True)
+    response_file_path = os.path.join(chat_history_dir, 'response_5.txt')
+    
+    with open(response_file_path, "w", encoding='utf-8') as f:
+        f.write(response.choices[0].message.content)
 
-    return response.output_text
+    return response.choices[0].message.content
 

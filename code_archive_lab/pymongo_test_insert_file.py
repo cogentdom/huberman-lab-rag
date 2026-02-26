@@ -1,5 +1,5 @@
 import pandas as pd
-from utils import load_dict
+from app.utils import load_dict
 # Get the database using the method we defined in pymongo_test_insert file
 from pymongo_get_database import get_database
 
