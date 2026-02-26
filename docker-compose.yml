@@ -1,0 +1,96 @@
+version: '3.8'
+
+networks:
+  huberman-network:
+    driver: bridge
+
+services:
+  redis:
+    image: redis/redis-stack:latest
+    container_name: huberman-redis
+    networks:
+      - huberman-network
+    ports:
+      - "6379:6379"
+      - "8001:8001"  # RedisInsight web UI
+    volumes:
+      - redis_data:/data
+      - ./app/redis_backup_20250619_064236.rdb:/backup/dump.rdb:ro
+    command: >
+      sh -c "
+        echo 'Starting Redis Stack...'
+        
+        # Create data directory if it doesn't exist
+        mkdir -p /data
+        
+        # Load initial backup if no data exists
+        if [ ! -f /data/dump.rdb ] && [ -f /backup/dump.rdb ]; then
+          echo 'Loading initial backup data...'
+          cp /backup/dump.rdb /data/dump.rdb
+          echo 'Initial backup loaded successfully'
+        fi
+        
+        # Check if we need to auto-restore search index
+        if [ -f /data/auto_restore_needed ]; then
+          echo 'Auto-restore flag found - will restore search index after startup'
+        fi
+        
+        # Start Redis with enhanced persistence settings
+        redis-server \
+          --dir /data \
+          --dbfilename dump.rdb \
+          --save 60 1 \
+          --save 300 10 \
+          --save 900 1 \
+          --stop-writes-on-bgsave-error no \
+          --rdbcompression yes \
+          --rdbchecksum yes \
+          --loglevel warning \
+          --timeout 0 \
+          --tcp-keepalive 300 \
+          --tcp-backlog 511 \
+          --protected-mode no \
+          --loadmodule /opt/redis-stack/lib/redisearch.so \
+          --loadmodule /opt/redis-stack/lib/redistimeseries.so \
+          --loadmodule /opt/redis-stack/lib/rejson.so \
+          --loadmodule /opt/redis-stack/lib/redisbloom.so
+      "
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  app:
+    build: .
+    container_name: huberman-app
+    networks:
+      - huberman-network
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      - FLASK_ENV=production
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - REDIS_PASSWORD=
+    volumes:
+      - ./app/data:/app/app/data:ro
+      - app_chat_history:/app/app/chat_history
+    depends_on:
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+volumes:
+  redis_data:
+    driver: local
+  app_chat_history:
+    driver: local 

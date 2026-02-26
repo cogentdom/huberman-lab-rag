@@ -11,10 +11,6 @@ data/
 
 __pycache__/
 
-# IDEs
-.vscode/
-.cursorrules
-
 # Jupyter Book
 book-mscf
 
