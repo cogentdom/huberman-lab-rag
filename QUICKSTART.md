@@ -1,63 +1,78 @@
-# Huberman Lab Chat - Quick Start Guide
+# Local Quickstart
+
+Use this guide when running without Docker.
 
 ## Prerequisites
-1. **Redis**: Make sure Redis server is running
-   ```bash
-   redis-server
-   ```
 
-2. **Virtual Environment**: The `.venv` directory should exist with all dependencies installed
+- Python 3.12+
+- Redis Stack or Redis running on `localhost:6379`
+- OpenAI API key
+- Data assets present in `app/data/`:
+  - `embeddings.csv`
+  - `title_dict.pkl`
+  - `chunk_dict.pkl`
 
-## Running the App
+## 1) Environment setup
 
-### Option 1: Use the startup script (Recommended)
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+cp env.template .env
+```
+
+Edit `.env` and set:
+
+```bash
+OPENAI_API_KEY=your_openai_api_key_here
+```
+
+## 2) Start Redis
+
+```bash
+redis-server
+```
+
+Verify:
+
+```bash
+redis-cli ping
+```
+
+## 3) Build the vector index
+
+```bash
+cd app
+python setup_vector_db.py
+cd ..
+```
+
+## 4) Run the app
+
 ```bash
 ./run_app.sh
 ```
 
-### Option 2: Manual startup
-```bash
-# Activate virtual environment
-source .venv/bin/activate
+## 5) Access endpoints
 
-# Run the app
-python app/app.py
-```
+- Web UI: `http://localhost:8000`
+- API: `POST http://localhost:8000/query`
 
-## Access the App
-- **Web Interface**: http://localhost:8000
-- **API Endpoint**: http://localhost:8000/query (POST)
+Example request:
 
-## Troubleshooting
-
-### Port 5000 in use (AirPlay Receiver)
-The app now uses port 8000 to avoid conflicts with macOS AirPlay Receiver.
-
-### "No module named 'flask'" error
-Make sure you're running from the project root directory and the virtual environment is activated:
-```bash
-cd /path/to/huberman-lab-rag
-source .venv/bin/activate
-python app/app.py
-```
-
-### Redis connection errors
-Ensure Redis is running:
-```bash
-# Start Redis
-redis-server
-
-# Test Redis connection
-redis-cli ping
-```
-
-## API Usage Example
 ```bash
 curl -X POST http://localhost:8000/query \
   -H "Content-Type: application/json" \
-  -d '{"query": "What are the benefits of cold exposure?"}'
+  -d '{"query":"What are the benefits of cold exposure?"}'
 ```
 
-## Stopping the App
-- Press `Ctrl+C` in the terminal where the app is running
-- Or kill the process: `lsof -ti:8000 | xargs kill -9` 
+## Troubleshooting
+
+- `No module named ...`: activate `.venv` and run from project root
+- Redis errors: ensure `redis-cli ping` returns `PONG`
+- Empty / poor responses: rebuild the index with `python app/setup_vector_db.py`
+
+## Stop the app
+
+- Press `Ctrl+C` in the running terminal
+- Optional force stop: `lsof -ti:8000 | xargs kill -9`

@@ -1,216 +1,159 @@
-# Huberman Lab RAG - Docker Setup
+# Huberman Lab RAG - Docker Guide
 
-This document provides instructions for running the Huberman Lab RAG application using Docker containers.
+This guide covers running the full RAG stack with Docker: Flask app + Redis Stack.
 
 ## Prerequisites
 
-- Docker and Docker Compose installed on your system
+- Docker Desktop (or Docker Engine + Compose)
 - OpenAI API key
 
-## Quick Start
+## Quick start
 
-1. **Clone the repository and navigate to the project directory**
+1. Create environment file:
 
-2. **Set up environment variables**
    ```bash
    cp env.template .env
    ```
-   Edit the `.env` file and add your OpenAI API key:
-   ```
+
+2. Set your API key in `.env`:
+
+   ```bash
    OPENAI_API_KEY=your_actual_api_key_here
    ```
 
-3. **Build and start the services**
+3. Start services:
+
    ```bash
    ./docker-start.sh
    ```
-   
-   Or manually:
-   ```bash
-   docker-compose up --build
-   ```
 
-4. **Initialize the database (FIRST RUN ONLY)**
+4. Initialize vector data (first run, or after a full reset):
+
    ```bash
    ./docker-init-data.sh
    ```
-   This step loads the embeddings and creates the search index in Redis. 
-   **Note**: After first initialization, data persists automatically across container restarts.
 
-5. **Access the application**
-   - Main application: http://localhost:8000
-   - RedisInsight (Redis web UI): http://localhost:8001
+5. Open:
+   - App: `http://localhost:8000`
+   - RedisInsight: `http://localhost:8001`
 
 ## Services
 
-### Flask Application (huberman-app)
-- **Port**: 8000
-- **Container**: huberman-app
-- **Features**: 
-  - RAG-powered chat interface
-  - Query processing with vector embeddings
-  - Context-aware responses using Huberman Lab content
-  - Auto-restore mechanism for search index
-  - Persistent data across container restarts
+### `huberman-app` (Flask)
 
-### Redis Stack (huberman-redis)
-- **Ports**: 
-  - 6379 (Redis server)
-  - 8001 (RedisInsight web UI)
-- **Container**: huberman-redis
-- **Features**:
-  - Vector search capabilities
-  - Enhanced persistent data storage with multiple save points
-  - Initialized with existing backup data
-  - Automatic protected mode disabled for container communication
+- Port `8000`
+- Serves the web UI and `/query` API
+- Runs an auto-restore check at startup (`auto-restore.py`)
 
-## Data Persistence
+### `huberman-redis` (Redis Stack)
 
-- **Redis Data**: Automatically persisted in Docker volume `redis_data` with enhanced save settings
-- **Application Data**: Mounted read-only from `./app/data`
-- **Chat History**: Persisted in Docker volume `app_chat_history`
-- **Redis Backup**: The existing `redis_backup_20250619_064236.rdb` is automatically loaded on first startup
-- **Auto-Restore**: Search index is automatically checked and restored on container startup
-- **Data Backup**: Use `./docker-backup.sh` to create timestamped backups
+- Ports `6379` (Redis) and `8001` (RedisInsight)
+- Stores vector index + documents
+- Uses persistent volume-backed storage
 
-## Development Commands
+## Persistence and restore behavior
 
-### Start services
+- Redis data persists in Docker volume `redis_data`
+- App chat prompts/responses persist in `app_chat_history`
+- `app/data` is mounted read-only into container
+- On startup:
+  - Redis loads `dump.rdb` from volume (or initial backup if needed)
+  - App checks whether `embeddings-index` exists
+  - Missing index is automatically rebuilt when possible
+
+## Common commands
+
+Start:
+
 ```bash
 docker-compose up
 ```
 
-### Start services in background
+Start detached:
+
 ```bash
 docker-compose up -d
 ```
 
-### View logs
+Logs:
+
 ```bash
 docker-compose logs -f app
 docker-compose logs -f redis
 ```
 
-### Stop services
+Stop:
+
 ```bash
 docker-compose down
 ```
 
-### Rebuild and restart
+Stop + remove volumes:
+
+```bash
+docker-compose down -v
+```
+
+Rebuild:
+
 ```bash
 docker-compose down
 docker-compose up --build
 ```
 
-### Clean up (removes volumes)
-```bash
-docker-compose down -v
-```
+Diagnostics:
 
-### Full cleanup and restart
-```bash
-./docker-clean.sh
-./docker-start.sh
-```
-
-### Diagnose issues
 ```bash
 ./docker-diagnose.sh
 ```
 
-### Initialize database
-```bash
-./docker-init-data.sh
-```
+Backup:
 
-### Create backup
 ```bash
 ./docker-backup.sh
 ```
 
 ## Troubleshooting
 
-### Quick Diagnosis
-Run the diagnostic script to identify issues:
+### API returns request-processing errors
+
+Most common causes:
+
+- Missing/invalid `OPENAI_API_KEY` in `.env`
+- Redis index not initialized
+
+Fix:
+
 ```bash
-./docker-diagnose.sh
+./docker-init-data.sh
+docker-compose restart app
 ```
 
-### "Sorry, there was an error processing your request"
-This error usually indicates one of two issues:
+### Redis connectivity or startup issues
 
-1. **Invalid OpenAI API Key**:
-   ```bash
-   # Edit .env file and add your real API key
-   nano .env
-   # Then restart the app container
-   docker-compose restart app
-   ```
+- Check service status: `docker-compose ps`
+- Check Redis logs: `docker-compose logs redis`
+- If network/resources are stale, run:
 
-2. **Empty Redis Database**:
-   ```bash
-   # Initialize the database with embeddings
-   ./docker-init-data.sh
-   ```
-   **Note**: With the new auto-restore feature, this should happen automatically on startup.
+  ```bash
+  ./docker-clean.sh
+  ./docker-start.sh
+  ```
 
-### Network Issues
-If you see "network not found" errors:
-```bash
-./docker-clean.sh  # Clean up
-./docker-start.sh  # Start fresh
-```
+### Data/index issues
 
-### Redis Connection Issues
-- Check if Redis service is healthy: `docker-compose ps`
-- View Redis logs: `docker-compose logs redis`
+Ensure required data files exist in `app/data/`:
 
-### Application Issues
-- Check app logs: `docker-compose logs app`
-- Verify environment variables are set correctly
-- Ensure `.env` file exists with valid `OPENAI_API_KEY`
+- `embeddings.csv`
+- `title_dict.pkl`
+- `chunk_dict.pkl`
 
-### Data Issues
-- Ensure the `app/data` directory contains the required `.pkl` files
-- Check that the Redis backup file exists: `app/redis_backup_20250619_064236.rdb`
-
-### Module Loading Issues
-If Redis fails to start with module errors, the docker-compose.yml has been configured to use only the essential modules (RedisSearch, RedisJSON, RedisBloom, RedisTimeSeries) and excludes problematic ones.
-
-## Health Checks
-
-Both services include health checks:
-- **Redis**: Responds to `redis-cli ping`
-- **App**: HTTP GET to `http://localhost:8000/`
-
-Check service health:
-```bash
-docker-compose ps
-```
-
-## Environment Variables
+## Environment variables
 
 | Variable | Description | Default |
-|----------|-------------|---------|
-| `OPENAI_API_KEY` | OpenAI API key for embeddings and chat | Required |
-| `REDIS_HOST` | Redis hostname | `redis` (in Docker) |
+| --- | --- | --- |
+| `OPENAI_API_KEY` | OpenAI API key used for query embeddings/chat | Required |
+| `REDIS_HOST` | Redis hostname inside Docker network | `redis` |
 | `REDIS_PORT` | Redis port | `6379` |
 | `REDIS_PASSWORD` | Redis password | Empty |
-| `FLASK_ENV` | Flask environment | `production` |
-
-## File Structure
-
-```
-.
-├── docker-compose.yml      # Docker services configuration
-├── Dockerfile             # Flask app container definition
-├── .dockerignore          # Files to exclude from Docker build
-├── .env.example           # Environment template
-├── app/                   # Application code
-│   ├── app.py            # Flask application
-│   ├── utils.py          # Redis and OpenAI utilities
-│   ├── data/             # Application data (mounted read-only)
-│   ├── templates/        # Flask templates
-│   └── redis_backup_*.rdb # Redis backup file
-└── requirements.txt       # Python dependencies
-``` 
+| `FLASK_ENV` | Flask environment mode | `production` |
